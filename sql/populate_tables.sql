@@ -1,0 +1,7 @@
+\copy candidates FROM 'C:\Users\crdca\Desktop\CSite\VoterPing\data\candidates.csv' WITH (FORMAT csv, HEADER);
+
+ALTER TABLE candidates
+ADD COLUMN candidate_id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY;
+
+ALTER TABLE users 
+ADD COLUMN user_id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY;
